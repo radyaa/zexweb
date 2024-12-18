@@ -18,3 +18,4 @@ A simple e-commerce website for selling Minecraft ranks. Built with HTML, CSS, a
 ## How to Run
 Simply open index.html in your web browser to start using the application.
 haloo
+ga
