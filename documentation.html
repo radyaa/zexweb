@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank Documentation - Zexter SMP S5</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: var(--background); /* Match the index.html background */
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+        }
+        .documentation {
+            padding: 2rem;
+            max-width: 1200px;
+        }
+        .rank-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .rank-doc {
+            background-color: rgba(22, 33, 62, 0.8);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        .rank-doc:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .rank-header {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .rank-header i {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: #e94560;
+        }
+        .rank-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .rank-content li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            background-color: rgba(233, 69, 96, 0.1);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        .rank-content li:hover {
+            background-color: rgba(233, 69, 96, 0.2);
+            transform: translateX(5px);
+        }
+        .rank-content li:before {
+            content: "\f0a9";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: #e94560;
+            margin-right: 0.8rem;
+            font-size: 1.1em;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .rank-doc::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233, 69, 96, 0.1) 0%, rgba(233, 69, 96, 0) 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .rank-doc:hover::after {
+            opacity: 1;
+        }
+        .rank-emoji {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-cube"></i>
+            Zexter Rank Shop
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="documentation.html" class="active">Documentation</a></li>
+        </ul>
+    </nav>
+
+    <div class="documentation">
+        <div class="hero">
+            <h1>Dokumentasi Rank</h1>
+            <p>Informasi lengkap tentang fitur-fitur rank</p>
+        </div>
+
+        <div class="rank-boxes">
+            <!-- Warriors Rank -->
+            <div class="rank-doc" id="warriors">
+                <div class="rank-header">
+                    <h2><span class="rank-emoji">⚔️</span> Warriors</h2>
+                </div>
+                <div class="rank-content">
+                    <h3>Fitur:</h3>
+                    <ul>
+                        <li>/Craft</li>
+                        <li>5× Sethome</li>
+                        <li>10k Claim Block</li>
+                        <li>18 Slot Backpack</li>
+                    </ul>
+                    <h3>Keuntungan:</h3>
+                    <ul>
+                        <li>1M Money</li>
+                        <li>100 Coin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ignition Rank -->
+            <div class="rank-doc" id="ignition">
+                <div class="rank-header">
+                    <h2><span class="rank-emoji">🔥</span> Ignition</h2>
+                </div>
+                <div class="rank-content">
+                    <h3>Fitur:</h3>
+                    <ul>
+                        <li>Mengakses Fitur Rank Dibawahnya</li>
+                        <li>/enderchest</li>
+                        <li>10× Sethome</li>
+                        <li>15.000 Claim Block</li>
+                        <li>27 Slot Backpack</li>
+                    </ul>
+                    <h3>Keuntungan:</h3>
+                    <ul>
+                        <li>1.5M Money</li>
+                        <li>150 Coin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Eternal Rank -->
+            <div class="rank-doc" id="eternal">
+                <div class="rank-header">
+                    <h2><span class="rank-emoji">⚡</span> Eternal</h2>
+                </div>
+                <div class="rank-content">
+                    <h3>Fitur:</h3>
+                    <ul>
+                        <li>Mengakses Fitur Rank Dibawahnya</li>
+                        <li>/anvil</li>
+                        <li>15× Sethome</li>
+                        <li>25.000 Claim Block</li>
+                        <li>36 Slot Backpack</li>
+                        <li>Keep Exp</li>
+                    </ul>
+                    <h3>Keuntungan:</h3>
+                    <ul>
+                        <li>2.5M Money</li>
+                        <li>250 Coin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Scaters Rank -->
+            <div class="rank-doc" id="scaters">
+                <div class="rank-header">
+                    <h2><span class="rank-emoji">🌟</span> Scaters</h2>
+                </div>
+                <div class="rank-content">
+                    <h3>Fitur:</h3>
+                    <ul>
+                        <li>Mengakses Fitur Rank Dibawahnya</li>
+                        <li>/fly</li>
+                        <li>/clan</li>
+                        <li>/kit claim scaters</li>
+                        <li>20× Sethome</li>
+                        <li>40.000 Claim Block</li>
+                        <li>45 Slot Backpack</li>
+                    </ul>
+                    <h3>Keuntungan:</h3>
+                    <ul>
+                        <li>4M Money</li>
+                        <li>400 Coin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Crystal Rank -->
+            <div class="rank-doc" id="crystal">
+                <div class="rank-header">
+                    <h2><span class="rank-emoji">💎</span> Crystal</h2>
+                </div>
+                <div class="rank-content">
+                    <h3>Fitur:</h3>
+                    <ul>
+                        <li>Mengakses fitur rank dibawahnya</li>
+                        <li>/nick</li>
+                        <li>/kit claim CRYSTAL</li>
+                        <li>25× Sethome</li>
+                        <li>80.000 Claim Block</li>
+                        <li>54 Slot Backpack</li>
+                    </ul>
+                    <h3>Keuntungan:</h3>
+                    <ul>
+                        <li>5M Money</li>
+                        <li>500 Coin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mystic Rank -->
+            <div class="rank-doc" id="mystic">
+                <div class="rank-header">
+                    <h2><span class="rank-emoji">✨</span> Mystic</h2>
+                </div>
+                <div class="rank-content">
+                    <h3>Fitur:</h3>
+                    <ul>
+                        <li>Mengakses Fitur Rank Dibawahnya</li>
+                        <li>/itemname</li>
+                        <li>/pweather</li>
+                        <li>/ptime</li>
+                        <li>/repair</li>
+                        <li>/kit claim mystic</li>
+                        <li>30× Sethome</li>
+                        <li>130.000 Claim Block</li>
+                        <li>54 Slot Backpack</li>
+                    </ul>
+                    <h3>Keuntungan:</h3>
+                    <ul>
+                        <li>7M Money</li>
+                        <li>700 Coin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Astral Rank -->
+            <div class="rank-doc" id="astral">
+                <div class="rank-header">
+                    <h2><span class="rank-emoji">🌌</span> Astral</h2>
+                </div>
+                <div class="rank-content">
+                    <h3>Fitur:</h3>
+                    <ul>
+                        <li>Mengakses Fitur Rank Dibawahnya</li>
+                        <li>/heal</li>
+                        <li>/feed</li>
+                        <li>/back</li>
+                        <li>/disponsal</li>
+                        <li>/kit claim zexstral</li>
+                        <li>35× Sethome</li>
+                        <li>230.000 Claim Block</li>
+                        <li>54 Slot Backpack</li>
+                    </ul>
+                    <h3>Keuntungan:</h3>
+                    <ul>
+                        <li>9M Money</li>
+                        <li>900 Coin</li>
+                        <li>Coin + money dari season lalu tidak hilang</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Zexter SMP Season 5. All rights reserved.</p>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function highlightRank(targetId) {
+            var targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({behavior: 'smooth'});
+                targetElement.classList.add('highlight');
+                setTimeout(function() {
+                    targetElement.classList.remove('highlight');
+                }, 2000);
+            }
+        }
+
+        // Handle initial page load
+        var hash = window.location.hash;
+        if (hash) {
+            highlightRank(hash.substring(1));
+        }
+
+        // Handle clicks on "Lihat Fitur Rank" buttons
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('href').substring(1);
+                highlightRank(targetId);
+            });
+        });
+    });
+</script>
+</body>
+</html>
